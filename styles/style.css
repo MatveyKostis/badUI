@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+body {
+    background: #07091f;
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: "Noto sans", sans-serif;
+    height: 100vh; /* Добавлено: задаёт полную высоту видимой области */
+    display: flex; /* Добавлено: включает flexbox для body */
+    flex-direction: column; /* Добавлено: устанавливает вертикальное направление */
+    justify-content: center; /* Добавлено: центрирует содержимое по вертикали */
+}
+
+.text-with-background{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: normal;
+    font-size: 50px;
+}
+.text-under_main{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-end;
+    align-content: stretch;
+}
+
+main {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: flex-start;
+    width: 100%; /* Добавлено: чтобы main занимал всю ширину */
+}
+
+.bad1_ui{
+    padding: 10px;
+    margin: 10px;
+    background: #12192b;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.annoying_button{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100px;
+    background: blue;
+    color: white;
+    border-radius: 20px;
+}
+
+.bad1_ui button{
+    padding: 10px;
+    margin: 10px;
+    background: #12192b;
+    border-radius: 10px;
+    font-size: 20px;
+    color:white;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+@keyframes button_animation {
+    0% {
+        background: #12192b;
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.first_bad:hover {
+    animation: button_animation 1s ease-in-out infinite;
+}

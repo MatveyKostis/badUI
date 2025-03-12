@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+body {
+    background: black;
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: "Noto sans", sans-serif;
+}
+.coins{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: normal;
+    font-size: 50px;
+}
+.buttons_ok{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: normal;
+}
+.buttons_ok button{
+    padding: 10px;
+    margin: 10px;
+    background: #12192b;
+    border-radius: 10px;
+    font-size: 20px;
+    color:white;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+@keyframes click_reaction {
+    0% {
+        background: #12192b;
+        transform: scale(0.8);
+    }
+    50% {
+        transform: rotate(180deg) scale(0.9);
+    }
+    100% {
+        transform: rotate(360deg) scale(1);
+    }
+}
+
+.Clicker {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /* Выберите один из подходов позиционирования */
+    /* Подход 1: Центрирование с абсолютным позиционированием */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    /* Подход 2: Занятие всего экрана */
+    /* min-height: 100vh;
+    width: 100%; */
+
+    cursor: pointer;
+}
+
+.Clicker img {
+    background: gray;
+    border-radius: 50px;
+}
+
+.clicker:active {
+    transform: scale(0.95);
+}
