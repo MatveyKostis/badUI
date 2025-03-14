@@ -1,5 +1,7 @@
 import browser
 import random
+import sys
+sys.path.append('pythonscripts')  # Add parent directory to path
 from brython_easier import *
 
 annoying_button = html.getElement(".annoying_button")

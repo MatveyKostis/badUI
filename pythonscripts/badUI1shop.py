@@ -1,3 +1,5 @@
+import sys
+sys.path.append('pythonscripts')  # Add parent directory to path
 from brython_easier import *
 
 colors = [
