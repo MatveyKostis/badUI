@@ -12,6 +12,7 @@ body {
     justify-content: center; /* Добавлено: центрирует содержимое по вертикали */
 }
 
+
 .text-with-background{
     display: flex;
     flex-direction: column;

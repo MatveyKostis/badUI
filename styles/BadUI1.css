@@ -16,6 +16,37 @@ body {
     align-content: normal;
     font-size: 50px;
 }
+
+@keyframes annoying_buttons {
+    0%{
+        transform: translateY(-10px);
+    }
+    20%{
+        transform: translateX(-10px);
+    }
+    50%{
+        transform: translateY(10px);
+    }
+    80%{
+        transform: translateX(10px);
+    }
+    100%{
+        transform: translateY(-10px);
+    }
+}
+
+button:hover{
+    animation: annoying_buttons 1s ease-in-out infinite;
+}
+
+button {
+    border: none;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
 .buttons_ok{
     display: flex;
     flex-direction: row;
@@ -34,6 +65,8 @@ body {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
+
+
 @keyframes click_reaction {
     0% {
         background: #12192b;
@@ -46,6 +79,8 @@ body {
         transform: rotate(360deg) scale(1);
     }
 }
+
+
 
 .Clicker {
     display: flex;

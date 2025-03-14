@@ -1,6 +1,6 @@
 import browser
 import random
-from brython import bind, html, localstorage, timers, input_handle, bind, brython_etc
+from brython_easier import *
 
 annoying_button = html.getElement(".annoying_button")
 colors = [
@@ -10,9 +10,10 @@ colors = [
 
 @timers.set_interval_decorator("seconds", 0.5)
 def annoying_button_func():
-    annoying_button.style.top = f"{random.randint(0, 100)}%"
-    annoying_button.style.left = f"{random.randint(0, 100)}%"
+    annoying_button.style.top = f"{random.randint(0, brython_etc.get_window_size()[1] - 100)}px"
+    annoying_button.style.left = f"{random.randint(0, brython_etc.get_window_size()[0] - 100)}px"
     annoying_button.style.backgroundColor = random.choice(colors)
+
 
 @bind.bind('.annoying_button', "click")
 def annoying_click(event):
